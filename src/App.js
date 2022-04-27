@@ -6,11 +6,14 @@ import Filters from "./components/filters/filters";
 import Cards from "./components/cards/cards";
 import axios from "axios";
 import Paginate from "./components/pagination/paginate";
+import Search from "./components/search/search";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(1);
   const [users, setUsers] = useState([]);
-  const apiEndpoint = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  const [search, setSearch] = useState("");
+
+  const apiEndpoint = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
   useEffect(() => {
     async function getData() {
@@ -26,6 +29,7 @@ function App() {
       <h1 className="text-center ubuntu my-4">
         Rick & Morty <span className="text-primary">Wiki</span>
       </h1>
+      <Search setSearch={setSearch} setPageNumber={setPageNumber} />
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -38,7 +42,11 @@ function App() {
           </div>{" "}
         </div>
       </div>
-      <Paginate />
+      <Paginate
+        totalPages={users.info?.pages}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+      />
     </React.Fragment>
   );
 }

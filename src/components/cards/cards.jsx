@@ -7,9 +7,9 @@ const Cards = ({ users }) => {
   }
 
   const userStatusClass = (userStatus) => {
-    if (userStatus === "Dead") return "btn-danger";
-    if (userStatus === "unknown") return "btn-secondary";
-    return "btn-success";
+    if (userStatus === "Dead") return "bg-danger";
+    if (userStatus === "unknown") return "bg-secondary";
+    return "bg-success";
   };
 
   return users.map((user) => (
@@ -26,9 +26,9 @@ const Cards = ({ users }) => {
       </div>
 
       <div
-        className={`${styles.badge} position-absolute btn ${userStatusClass(
+        className={`${styles.badge} position-absolute  ${userStatusClass(
           user.status
-        )} btn-sm`}
+        )} badge`}
       >
         {user.status}
       </div>
