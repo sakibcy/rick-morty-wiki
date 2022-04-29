@@ -7,13 +7,17 @@ import Cards from "./components/cards/cards";
 import axios from "axios";
 import Paginate from "./components/pagination/paginate";
 import Search from "./components/search/search";
+import FilterContext from "./context/filterContext";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(1);
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+  const [status, setStatus] = useState("");
+  const [gender, setGender] = useState("");
+  const [species, setSpecies] = useState("");
 
-  const apiEndpoint = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  const apiEndpoint = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   useEffect(() => {
     async function getData() {
@@ -33,7 +37,17 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <Filters />
+            <FilterContext.Provider
+              value={{
+                status: status,
+                setStatus: setStatus,
+                setGender: setGender,
+                setSpecies: setSpecies,
+                setPageNumber: setPageNumber,
+              }}
+            >
+              <Filters />
+            </FilterContext.Provider>
           </div>
           <div className="col-8">
             <div className="row">

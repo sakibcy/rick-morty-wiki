@@ -11,6 +11,8 @@
 # production
 /build
 
+rick-morty-wiki.code-workspace
+
 # misc
 .DS_Store
 .env.local
