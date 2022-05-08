@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import Cards from "../cards/cards";
-import InputGroup from "../filters/inputGroup";
+import InputGroup from "../components/filters/inputGroup";
+import Cards from "./../components/cards/cards";
 
 const Episode = () => {
   const [id, setId] = useState(1);

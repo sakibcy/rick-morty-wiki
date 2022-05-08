@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import Search from "../search/search";
-import FilterContext from "../../context/filterContext";
-import Filters from "../filters/filters";
-import Cards from "../cards/cards";
-import Paginate from "../pagination/paginate";
+import Search from "../components/search/search";
+import FilterContext from "../context/filterContext";
+import Filters from "../components/filters/filters";
+import Cards from "../components/cards/cards";
+import Paginate from "./../components/pagination/paginate";
 
 const Home = () => {
   const [pageNumber, setPageNumber] = useState(1);
