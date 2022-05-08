@@ -1,0 +1,5 @@
+.active {
+  border-bottom: 3px solid rgb(53, 53, 233);
+  font-weight: bold;
+  color: rgb(53, 53, 233) !important;
+}
