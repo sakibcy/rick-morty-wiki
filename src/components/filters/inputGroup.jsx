@@ -1,4 +1,4 @@
-const InputGroup = ({ totalEpisode, setId }) => {
+const InputGroup = ({ totalEpisode, setId, inputGroupName }) => {
   return (
     <div className="input-group mb-3    ">
       <button
@@ -13,7 +13,7 @@ const InputGroup = ({ totalEpisode, setId }) => {
         {totalEpisode.map((episode) => (
           <li key={episode.id} style={{ cursor: "pointer" }}>
             <span className="dropdown-item" onClick={() => setId(episode.id)}>
-              Episode - {episode.id}
+              {inputGroupName} - {episode.id}
             </span>
           </li>
         ))}

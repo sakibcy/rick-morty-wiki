@@ -11,7 +11,6 @@ const Episode = () => {
   const [totalEpisode, setTotalEpisode] = useState([]);
 
   const apiEndPoint = `https://rickandmortyapi.com/api/episode/${id}`;
-  console.log(apiEndPoint);
 
   useEffect(() => {
     const getData = async () => {
@@ -25,13 +24,13 @@ const Episode = () => {
         })
       );
       setCharacters(character);
-      async function getAllEpisode() {
+
+      (async function () {
         const allEpisode = await axios.get(
           `https://rickandmortyapi.com/api/episode/`
         );
         setTotalEpisode(allEpisode.data.results);
-      }
-      getAllEpisode();
+      })();
     };
 
     getData();
@@ -40,7 +39,7 @@ const Episode = () => {
   const { name, air_date } = episode;
 
   return (
-    <div className="container">
+    <div className="container justify-content-center">
       <div className="row">
         <h1 className="text-center mb-3">
           Episode:{" "}
@@ -53,14 +52,20 @@ const Episode = () => {
         </h5>
       </div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-lg-3 col-12">
           {" "}
           <h4 className="">Pick Episode </h4>{" "}
-          <InputGroup totalEpisode={totalEpisode} setId={setId} />
+          <span className="text-center">
+            <InputGroup
+              inputGroupName="Episode"
+              totalEpisode={totalEpisode}
+              setId={setId}
+            />
+          </span>
         </div>
-        <div className="col-8">
+        <div className="col-lg-8 col-12 justify-content-center">
           <div className="row">
-            <Cards users={characters} />
+            <Cards page="/episodes/" users={characters} />
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const NavBar = () => {
             <NavLink className="nav-link" to="/location">
               Location
             </NavLink>
-            <NavLink className="nav-link" to="/episode">
+            <NavLink className="nav-link" to="/episodes">
               Episodes
             </NavLink>
           </div>

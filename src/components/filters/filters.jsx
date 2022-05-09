@@ -15,13 +15,13 @@ const Filters = () => {
   };
   const filterContext = useContext(FilterContext);
   return (
-    <div className="alert alert-success ">
-      <div className="fs-5 fw-bold text-center">
+    <div className="alert alert-secondary ">
+      <div className="fs-5 fw-bold text-center text-black">
         <FontAwesomeIcon icon={faFilter} /> Filters
       </div>
       <div
         style={{ cursor: "pointer" }}
-        className={`my-3 fs-6 ${styles.filter} d-flex justify-content-center`}
+        className={`my-3 fs-6 fw-bold rounded-3 ${styles.filter} d-flex justify-content-center`}
         onClick={() => handleClear()}
       >
         <FontAwesomeIcon icon={faBroom} /> Clear Filters

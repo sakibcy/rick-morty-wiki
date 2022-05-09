@@ -31,7 +31,7 @@ const Home = () => {
       <Search setSearch={setSearch} setPageNumber={setPageNumber} />
       <div className="container">
         <div className="row">
-          <div className="col-3">
+          <div className="col-lg-3 col-12 mb-5">
             <FilterContext.Provider
               value={{
                 status: status,
@@ -44,9 +44,9 @@ const Home = () => {
               <Filters />
             </FilterContext.Provider>
           </div>
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <div className="row">
-              <Cards users={users.results} />
+              <Cards page="/" users={users.results} />
             </div>
           </div>{" "}
         </div>
