@@ -1,4 +1,4 @@
-## See Live Demo
+# See Live Demo
 
 ### Visit here for live demo: [Rick and Wiki](https://rick-and-wiki.vercel.app/)
 
@@ -7,7 +7,7 @@
 <img src="./images/rick-and-wiki.png" />
 </a>
 
-## Run on You PC
+# Run on You PC
 
 note: You need to have [node](https://nodejs.org) installed on your pc
 
@@ -19,3 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+# API used for this project
+[The Rick and Morty API](https://rickandmortyapi.com/)
