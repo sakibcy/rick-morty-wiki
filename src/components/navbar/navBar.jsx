@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-5 mb-4">
       <div className="container-fluid ">
         <Link to="/" className="fs-3 ubuntu navbar-brand ps-5">
-          Rick & <span className="text-primary">Wiki</span>
+          Rick & Morty <span className="text-primary">Wiki</span>
         </Link>
 
         <button
