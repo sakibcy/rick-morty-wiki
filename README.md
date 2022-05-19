@@ -9,6 +9,8 @@
 
 ## Run on You PC
 
+note: You need to have [node](https://nodejs.org) installed on your pc
+
 - Download this repository on your computer\
   `git clone https://github.com/sakibcy/rick-morty-wiki.git`
 - then `npm start`
