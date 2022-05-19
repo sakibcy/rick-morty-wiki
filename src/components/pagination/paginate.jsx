@@ -13,7 +13,6 @@ const Paginate = ({ pageNumber, setPageNumber, totalPages }) => {
 
     return () => window.removeEventListener("resize", updateDimension);
   }, []);
-  console.log(width);
 
   return (
     <React.Fragment>

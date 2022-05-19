@@ -56,6 +56,22 @@ const Home = () => {
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
       />
+      <footer className="bg-light text-center text-lg-start">
+        <div
+          className="text-center p-3"
+          style={{ backgroundColor: "rgba(225, 227, 225)" }}
+        >
+          For the project source code:{" "}
+          <a
+            className=" text-decoration-none link-success"
+            href="https://github.com/sakibcy/rick-morty-wiki"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sakibul Hasan - Github
+          </a>
+        </div>
+      </footer>
     </React.Fragment>
   );
 };
