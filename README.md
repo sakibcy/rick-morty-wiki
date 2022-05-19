@@ -4,7 +4,7 @@
 
 \
 <a href="https://rick-and-wiki.vercel.app/">
-<img src="./images/rick-and-wiki.png">
+<img src="./images/rick-and-wiki.png"> 
 </a>
 
 ## Run on You PC
